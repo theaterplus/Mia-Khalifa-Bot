@@ -27,8 +27,8 @@ from miakhalifa.modules.connection import connect_button
 
 
 PM_START_TEXT = """
-_Hello_ *{}*
-_My name is_ *{}*\n_A Powerful Telegram ProBot that Manage only @TheaterPlusChat Group!!_
+Hello *{}*
+My name is *{}*\n I am a Pro Group Manager Bot that manage @TheaterPlusChat Group. Press the *HELP* button below to know more about me and my work!!
 _Made by_ [{}](tg://user?id={})
 """
 
