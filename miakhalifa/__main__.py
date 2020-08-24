@@ -28,7 +28,7 @@ from miakhalifa.modules.connection import connect_button
 
 PM_START_TEXT = """
 Hello 👋🏻, *{}*
-My name is *{}*! I am a Pro Group Manager Bot that manage @TheaterPlusChat Group. Press the *HELP* button below to know more about me and my features!!
+My name is *{}*! I am a Pro Group Manager Bot that manage *@TheaterPlusChat* Group. Press the *HELP* button below to know more about me and my features!!
                     
 """
 
