@@ -1,2 +1,2 @@
-worker: python3 -m TheaterPlus
+worker: python3 -m theaterplus
 ps:scale worker=1
