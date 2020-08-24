@@ -28,7 +28,7 @@ from miakhalifa.modules.connection import connect_button
 
 PM_START_TEXT = """
 _Hello_ *{}*
-_My name is_ *{}*\n_A Powerful Telegram ProBot to Manage only @TheaterPlusChat Group!!_
+_My name is_ *{}*\n_A Powerful Telegram ProBot that Manage only @TheaterPlusChat Group!!_
 _Maintained by_ [{}](tg://user?id={})
 """
 
@@ -41,7 +41,6 @@ the things I can help you with.
  ⭕️ - /start: start the bot
  ⭕️ - /help: PM's you this message.
  ⭕️ - /help <module name>: PM's you info about that module.
- ⭕️ - /source: Information about my source.
  ⭕️ - /settings:
    🔺 - in PM: will send you your settings for all supported modules.
    🔺 - in a group: will redirect you to pm, with all that chat's settings.
@@ -57,10 +56,7 @@ def vercheck() -> str:
     return str(VERSION)
 
 
-SOURCE_STRING = """
-⚡I'm built in python3, using the python-telegram-bot library, and am fully opensource - you can find what makes me tick [here](https://github.com/Adithyan1133-ctrl/Mia-Khalifa-Bot)
-⚡You Can Clone Me [Here](https://heroku.com/deploy?template=https://github.com/Adithyan1133-ctrl/Mia-Khalifa-Bot.git)
-"""
+
 
 
 IMPORTED = {}
@@ -180,7 +176,7 @@ def send_start(bot, update):
     text = PM_START_TEXT
 
     keyboard = [[InlineKeyboardButton(text="😇-HELP",callback_data="help_back"),InlineKeyboardButton(text="👨🏻‍💻-CREATOR",url="https://t.me/neil_arms")]]
-    keyboard += [[InlineKeyboardButton(text="💬-CONNECT GROUP", callback_data="main_connect"),InlineKeyboardButton(text="🌐-CHANNEL",url="https://t.me/Theater_Plus")]]
+    keyboard += [[InlineKeyboardButton(text="💬-GROUP", callback_data="main_connect"),InlineKeyboardButton(text="🌐-CHANNEL",url="https://t.me/Theater_Plus")]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
