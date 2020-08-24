@@ -29,7 +29,7 @@ from miakhalifa.modules.connection import connect_button
 PM_START_TEXT = """
 _Hello_ *{}*
 _My name is_ *{}*\n_A Powerful Telegram ProBot that Manage only @TheaterPlusChat Group!!_
-_Maintained by_ [{}](tg://user?id={})
+_Made by_ [{}](tg://user?id={})
 """
 
 
@@ -176,7 +176,7 @@ def send_start(bot, update):
     text = PM_START_TEXT
 
     keyboard = [[InlineKeyboardButton(text="😇-HELP",callback_data="help_back"),InlineKeyboardButton(text="👨🏻‍💻-CREATOR",url="https://t.me/neil_arms")]]
-    keyboard += [[InlineKeyboardButton(text="💬-GROUP",url="https://t.me/TheaterPlusChat"),InlineKeyboardButton(text="🌐-CHANNEL",url="https://t.me/Theater_Plus")]]
+    keyboard += [[InlineKeyboardButton(text="💬-GROUP",url="https://t.me/TheaterPlusChat"),InlineKeyboardButton(text="📢-CHANNEL",url="https://t.me/Theater_Plus")]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
