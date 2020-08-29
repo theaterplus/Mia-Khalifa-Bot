@@ -74,7 +74,7 @@ GDPR = []
 
 START_IMG = os.environ.get('START_IMG', None)
 if START_IMG is None:
-    img = "https://telegra.ph/file/6af1681d9318bf931d620.jpg"
+    img = "https://telegra.ph/file/9198849ab55944da00637.jpg"
 else:
   img = START_IMG    
     
@@ -176,7 +176,7 @@ def send_start(bot, update):
     text = PM_START_TEXT
 
     keyboard = [[InlineKeyboardButton(text="🤖 HELP",callback_data="help_back"),InlineKeyboardButton(text="👨🏻‍💻 CREATOR",url="https://t.me/neil_arms")]]
-    keyboard += [[InlineKeyboardButton(text="💬 GROUP",url="https://t.me/TheaterPlusChat"),InlineKeyboardButton(text="📢 CHANNEL",url="https://t.me/Theater_Plus")]]
+    keyboard += [[InlineKeyboardButton(text="💬 GROUP",url="https://t.me/HDCinemasChat"),InlineKeyboardButton(text="📢 CHANNEL",url="https://t.me/HDCinemas_GDrive")]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
