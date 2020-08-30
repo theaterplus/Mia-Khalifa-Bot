@@ -28,7 +28,7 @@ from miakhalifa.modules.connection import connect_button
 
 PM_START_TEXT = """
 Hello 👋🏻, *{}*
-My name is 🅐🅝🅝🅐​! I am a Pro Group Manager Bot that manage *@HDCinemasChat* Group. Press the *HELP* button below to know more about me and my features!!
+My name is 🅐🅝🅝🅐​! I am a Pro Group Manager Bot that manage *@HDCinemaChat* Group. Press the *HELP* button below to know more about me and my features!!
                     
 """
 
@@ -176,7 +176,7 @@ def send_start(bot, update):
     text = PM_START_TEXT
 
     keyboard = [[InlineKeyboardButton(text="🤖 HELP",callback_data="help_back"),InlineKeyboardButton(text="👨🏻‍💻 CREATOR",url="https://t.me/neil_arms")]]
-    keyboard += [[InlineKeyboardButton(text="💬 GROUP",url="https://t.me/HDCinemasChat"),InlineKeyboardButton(text="📢 CHANNEL",url="https://t.me/HDCinemas_GDrive")]]
+    keyboard += [[InlineKeyboardButton(text="💬 GROUP",url="https://t.me/HDCinemaChat"),InlineKeyboardButton(text="📢 CHANNEL",url="https://t.me/HDCinema_GDrive")]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
