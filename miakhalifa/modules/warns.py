@@ -69,7 +69,6 @@ def warn(user: User, chat: Chat, reason: str, message: Message, warner: User = N
         if reason:
             reply += f"\n• Count:{num_warns}/{limit}"
             reply += f"\n• Reason:\n{html.escape(reason)}"
-            reply += f"\nSoon you will be banned 🚫
         
         log_reason = (f"<b>{html.escape(chat.title)}:</b>\n"
                       f"#WARNn<b>Admin:</b> {warner_tag}\n"
