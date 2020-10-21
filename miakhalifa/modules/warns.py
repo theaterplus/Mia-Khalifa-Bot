@@ -62,13 +62,13 @@ def warn(user: User, chat: Chat, reason: str, message: Message, warner: User = N
 
     else:
         
-        keyboard = InlineKeyboardMarkup([{InlineKeyboardButton("❌ Cancel",
+        keyboard = InlineKeyboardMarkup([{InlineKeyboardButton("❌  Cancel",
                                                                callback_data="rm_warn({})".format(user.id))}])
 
-        reply = f"{mention_html(user.id, user.first_name)} has been warned!"
+        reply = f"{mention_html(user.id, user.first_name)} has been <b>WARNED!</b>"
         if reason:
-            reply += f"\n• <b>Count : {num_warns}/{limit}"
-            reply += f"\n• <b>Reason : {html.escape(reason)}"
+            reply += f"\n• Count : {num_warns}/{limit}"
+            reply += f"\n• Reason : {html.escape(reason)}"
         
         log_reason = (f"<b>{html.escape(chat.title)}:</b>\n"
                       f"#WARNn<b>Admin:</b> {warner_tag}\n"
