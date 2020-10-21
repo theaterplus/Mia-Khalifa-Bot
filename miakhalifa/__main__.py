@@ -28,7 +28,7 @@ from miakhalifa.modules.connection import connect_button
 
 PM_START_TEXT = """
 Hello 👋🏻, *{}*
-My name is 🅐🅝🅝🅐​! I am a Pro Group Manager Bot that manage *@HDCinemaChat* Group. Press the *HELP* button below to know more about me and my features!!
+My name is 🅐🅝🅝🅐 - I'm here to help you manage your groups as effectively as possible! Press the HELP button below to know more about me and my features!!
                     
 """
 
@@ -72,11 +72,7 @@ USER_SETTINGS = {}
 
 GDPR = []
 
-START_IMG = os.environ.get('START_IMG', None)
-if START_IMG is None:
-    img = "https://telegra.ph/file/9198849ab55944da00637.jpg"
-else:
-  img = START_IMG    
+    
     
 for module_name in ALL_MODULES:
     imported_module = importlib.import_module("miakhalifa.modules." + module_name)
@@ -175,8 +171,8 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="🤖 COMMANDS",callback_data="help_back"),InlineKeyboardButton(text="👨🏻‍💻 DEVELOPER",url="https://t.me/neil_arms")]]
-    keyboard += [[InlineKeyboardButton(text="🌐 CONNECT GROUP", callback_data="main_connect"),InlineKeyboardButton(text="➕ ADD ME",url="t.me/{}?startgroup=true".format(bot.username))]]
+    keyboard = [[InlineKeyboardButton(text="🤖 HELP",callback_data="help_back"),InlineKeyboardButton(text="👨🏻‍💻 DEVELOPER",url="https://t.me/neil_arms")]]
+    keyboard = [[InlineKeyboardButton(text="➕ ADD ME TO YOUR GROUPS",url="t.me/{}?startgroup=true".format(bot.username))]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
