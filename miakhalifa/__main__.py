@@ -28,7 +28,8 @@ from miakhalifa.modules.connection import connect_button
 
 PM_START_TEXT = """
 Hey *{}*! My name is 🅐🅝🅝🅐 - I'm here to help you manage your groups as effectively as possible! Press the *HELP* button below to know more about me and my features!!
-                    
+
+Subscribe *@NeilProjects_Bot* to get latest updates about me.                   
 """
 
 
@@ -73,7 +74,7 @@ GDPR = []
 
 START_IMG = os.environ.get('START_IMG', None)
 if START_IMG is None:
-    img = "https://telegra.ph/file/05536f803b6c6865a7e01.mp4"
+    img = "https://telegra.ph/file/12e74658c870ec1546b32.jpg"
 else:
   img = START_IMG
     
