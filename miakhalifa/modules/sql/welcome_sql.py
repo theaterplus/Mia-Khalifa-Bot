@@ -6,7 +6,7 @@ from miakhalifa.modules.helper_funcs.msg_types import Types
 from miakhalifa.modules.sql import SESSION, BASE
 
 DEFAULT_WELCOME = "Hey {first}, Welcome to {chatname}! How are you?"
-DEFAULT_GOODBYE = "Nice knowing ya!"
+DEFAULT_GOODBYE = "Goodbye 👋🏻!"
 
 class Welcome(BASE):
     __tablename__ = "welcome_pref2"
