@@ -73,6 +73,9 @@ GDPR = []
 
 START_IMG = os.environ.get('START_IMG', None)
 if START_IMG is None:
+    img = "https://telegra.ph/file/9198849ab55944da00637.jpg"
+else:
+  img = START_IMG
     
 
 for module_name in ALL_MODULES:
@@ -158,7 +161,7 @@ def start(bot: Bot, update: Update, args: List[str]):
             send_start(bot, update)
     else:
         update.effective_message.reply_text("Heya 🙋🏻‍♀️, {} Here..\nHow can I help you? 😊".format(bot.first_name),reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="🗣️ Commands Explanation",url="t.me/{}?start=help".format(bot.username))]]))
+                                                [[InlineKeyboardButton(text="🗣️ MY COMMANDS",url="t.me/{}?start=help".format(bot.username))]]))
 
 def send_start(bot, update):
     #Try to remove old message
@@ -172,7 +175,7 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="🤖 HELP",callback_data="help_back"),InlineKeyboardButton(text="👨🏻‍💻 DEVELOPER",url="https://t.me/neil_arms")]]
+    keyboard = [[InlineKeyboardButton(text="🛠️ HELP",callback_data="help_back"),InlineKeyboardButton(text="👨🏻‍💻 DEVELOPER",url="https://t.me/neil_arms")]]
     keyboard += [[InlineKeyboardButton(text="➕ ADD ME TO YOUR GROUPS",url="t.me/{}?startgroup=true".format(bot.username))]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
@@ -274,7 +277,7 @@ def get_help(bot: Bot, update: Update):
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="HELP",url="t.me/{}?start=help".format(bot.username))],  
-                                                [InlineKeyboardButton(text="CONTACT CREATOR",url="https://t.me/neil_arms")]]))
+                                                [InlineKeyboardButton(text="CONTACT DEVELOPER",url="https://t.me/neil_arms")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
