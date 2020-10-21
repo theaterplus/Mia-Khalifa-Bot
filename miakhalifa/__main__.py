@@ -27,8 +27,7 @@ from miakhalifa.modules.connection import connect_button
 
 
 PM_START_TEXT = """
-Hello 👋🏻, *{}*
-My name is 🅐🅝🅝🅐 - I'm here to help you manage your groups as effectively as possible! Press the HELP button below to know more about me and my features!!
+Hey *{}*! My name is 🅐🅝🅝🅐 - I'm here to help you manage your groups as effectively as possible! Press the *HELP* button below to know more about me and my features!!
                     
 """
 
@@ -74,9 +73,7 @@ GDPR = []
 
 START_IMG = os.environ.get('START_IMG', None)
 if START_IMG is None:
-    img = "https://telegra.ph/file/9198849ab55944da00637.jpg"
-else:
-  img = START_IMG
+    
 
 for module_name in ALL_MODULES:
     imported_module = importlib.import_module("miakhalifa.modules." + module_name)
