@@ -29,7 +29,7 @@ from miakhalifa.modules.connection import connect_button
 PM_START_TEXT = """
 Hey *{}*! My name is 🅐🅝🅝🅐 - I'm here to help you manage your groups as effectively as possible! Press the *HELP* button below to know more about me and my features!!
 
-Subscribe *@Neil_Projects* to get latest updates about me.                   
+**Maintained By @Neil_Projects**                   
 """
 
 
@@ -177,7 +177,7 @@ def send_start(bot, update):
     text = PM_START_TEXT
 
     keyboard = [[InlineKeyboardButton(text="🛠️ HELP",callback_data="help_back"),InlineKeyboardButton(text="👨🏻‍💻 DEVELOPER",url="https://t.me/neil_arms")]]
-    keyboard += [[InlineKeyboardButton(text="➕ ADD ME TO YOUR GROUPS",url="t.me/{}?startgroup=true".format(bot.username))]]
+    keyboard += [[InlineKeyboardButton(text="➕ ADD ME TO YOUR GROUP ➕",url="t.me/{}?startgroup=true".format(bot.username))]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
