@@ -3,20 +3,11 @@
 <p align="center">
 <img src="https://telegra.ph/file/b3ed82144387e81654d5c.jpg" alt="Mia Khalifa bot">
 
-[![Open Source Love](https://img.shields.io/badge/Find-on%20Telegram-blue.svg?logo=telegram)](https://telegram.dog/Anna_TGBot)  
+[![Open Source Love](https://img.shields.io/badge/Find-on%20Telegram-blue.svg?logo=telegram)](https://telegram.dog/AnnaTG_Bot)  
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
 Modular Telegram bot for managing your groups with a extras features with HunterxHunter theme.
 
-<p align="center">
-  <a href="https://github.com/Adithyan1133-ctrl/Mia-Khalifa-Bot/fork">
-    <img src="https://img.shields.io/github/forks/Adithyan1133-ctrl/Mia-Khalifa-Bot?label=Fork&style=social">
-    
-  </a>
-  <a href="https://github.com/Adithyan1133-ctrl/Mia-Khalifa-Bot">
-    <img src="https://img.shields.io/github/stars/Adithyan1133-ctrl/Mia-Khalifa-Bot?style=social">
-  </a>
-</p>
 
 
 
