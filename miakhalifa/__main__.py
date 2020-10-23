@@ -29,7 +29,7 @@ from miakhalifa.modules.connection import connect_button
 PM_START_TEXT = """
 Hey *{}*! My name is 🅐🅝🅝🅐 - I'm here to help you manage your groups as effectively as possible! Press the *HELP* button below to know more about me and my features!!
 
-*Maintained By @Neil_Projects*                  
+*Maintained & Hosted By @Neil_Projects*                  
 """
 
 
